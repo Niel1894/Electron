@@ -10,11 +10,16 @@ app.on('before-quit', () => {
 })
 
 app.on('ready', () =>{
-    let win = new BrowserWindow();
+    let win = new BrowserWindow({
+         width: 800, 
+         height: 600, 
+         center: true, 
+         title: "Explorador de Archivos",
+         maximizable: false
+         });
     win.on('closed', () => {
         win = null;
         app.quit();
     })
 })
 
-app.quit()
