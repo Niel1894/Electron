@@ -80,7 +80,6 @@ function createNewFileWindows(){
 }
 
 ipcMain.on('folder:new', (e,newFile) => {
-    console.log(newFile);
     mainWindows.webContents.send('folder:new', newFile)  
     newFolderWindows.close();
 });
